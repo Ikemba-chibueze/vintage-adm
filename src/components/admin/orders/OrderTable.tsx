@@ -103,12 +103,12 @@ export function OrderTable() {
           <OrderFilter onApply={handleApplyFilter} />
 
           {/* EXPORT */}
-          <Button
+          {/* <Button
             variant="outline"
-            className="gap-2 border-orange-200 text-[#DC8404] hover:bg-orange-50 rounded-lg"
+            className="gap-2 border-orange-200 text-white hover:bg-orange-50 bg-[#DC8404] rounded-lg"
           >
             <Download size={16} /> Download
-          </Button>
+          </Button> */}
         </div>
       </div>
 
@@ -167,7 +167,8 @@ export function OrderTable() {
                   <td className="p-6">
                     <StatusBadge status={order.status} />
                   </td>
-                  <td className="p-6 text-gray-600 text-right">
+                  <td className="p-6 text-gray-600 text-right"
+                  onClick={(e) => e.stopPropagation()}>
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
                         <Button

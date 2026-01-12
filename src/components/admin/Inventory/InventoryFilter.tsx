@@ -32,7 +32,6 @@ export function InventoryFilter({
 }: InventoryFilterProps) {
   const { register, handleSubmit, reset } = useForm<FilterValues>();
 
-  // Fetch Categories for Filter Dropdown
   const { data: categories } = useQuery({
     queryKey: ["categories"],
     queryFn: async () => (await api.get("/admin/inventory/categories")).data,
@@ -120,7 +119,7 @@ export function InventoryFilter({
               type="button"
               onClick={() => reset()}
               variant="outline"
-              className="flex-1 h-14 rounded-xl border-gray-200 text-black"
+              className="flex-1 h-14 rounded-xl border-gray-200 text-white"
             >
               Reset
             </Button>
