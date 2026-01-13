@@ -24,10 +24,10 @@ interface InventoryParams {
   limit?: number;
   search?: string;
   status?: string;
-  categoryId?: string; // Often needed for filters
-  minPrice?: string;   // Often needed for filters
-  maxPrice?: string;   // Often needed for filters
-  view?: 'all' | 'sold' | 'empty'; // 👈 ADD THIS LINE
+  categoryId?: string;
+  minPrice?: string;
+  maxPrice?: string;
+  view?: 'all' | 'sold' | 'empty';
 }
 
 export const useInventory = (
